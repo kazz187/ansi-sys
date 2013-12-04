@@ -1,0 +1,38 @@
+== Ruby-ANSI.SYS
+Ruby-ANSI.SYS: a Ruby library to render texts with ANSI
+sequences. Copyright (C) 2007 zunda <zunda at freeshell.org>
+unless otherwise stated.
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of
+the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see
+<http://www.gnu.org/licenses/>.
+
+=== Contributors
+@jugyo made lib/ansisys.rb compatible with Ruby 1.9
+http://twitter.com/jugyo/status/35232510141136896
+
+== setup.rb
+setup.rb: Copyright (c) 2000-2005 Minero Aoki
+
+This program is free software. You can distribute/modify this
+program under the terms of the GNU LGPL, Lesser General Public
+License version 2.1.
+
+Following modifications are applied based upon setup.rb version 3.4.1:
+* 2007-10-03 zunda <zunda at freeshell.org>
+  *  setup.rb: modified to use $stdout and $stderr instead of
+     STDOUT and STDERR
+* 2007-10-03 zunda <zunda at freeshell.org>
+  *  setup.rb: added spec task
+* 2011-02-10 zunda <zunda at freeshell.org>
+  *  setup.rb: Modified to use Test::Unit.setup_argv on Ruby 1.9

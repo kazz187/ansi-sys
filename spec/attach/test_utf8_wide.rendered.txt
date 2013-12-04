@@ -1,0 +1,2 @@
+NoMethodError in 'BlogsController GET /show/:id は最大5件のエントリをロードする
+こと'

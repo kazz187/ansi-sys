@@ -1,0 +1,63 @@
+h1. Ruby-ANSI.SYS
+
+h2. What
+
+MS-DOS console (with <code>DEVICE=ANSI.SYS</code>), Linux
+console, and other terminal emulators usually accept escape
+sequences which tell the terminal change colors of the text or
+move the cursor.
+
+Ruby-ANSI.SYS is a Ruby library to render texts with
+"ANSI escape sequences":http://en.wikipedia.org/wiki/ANSI_escape_code
+(Wikipedia) as an HTML fragment . It can also be used as a plugin
+for Hiki.
+
+h2. Download
+
+Have a look at
+"the RubyForge Project Info":http://rubyforge.org/projects/ansi-sys
+
+
+h2. Installation
+
+As a Ruby library:
+
+<pre>$ ruby setup.rb config
+$ ruby setup.rb setup
+# ruby setup.rb install</pre>
+
+Or:
+
+<pre># gem install ansi-sys</pre>
+
+As a Hiki plugin, copy the file lib/ansisys.rb into the
+misc/plugin directory and configure Hiki to enable the plugin.
+
+
+h2. Usage
+
+As a Ruby library:
+
+<pre>
+require 'ansisys'
+terminal = AnsiSys::Terminal.new
+terminal.echo("ansi-escaped-text")
+terminal.render #=> HTML fragment
+</pre>
+
+As a Hiki plugin:
+
+<pre>{{ansi_screen(attach_file_name)}}</pre>
+
+Please also refer the "API Document":rdoc/
+
+h2. Contact
+
+Please send your comments and patches to
+"the RubyForge Trackers":http://rubyforge.org/tracker/?group_id=4656
+
+h2. License
+
+Please refer
+"License.txt":rdoc/files/License_txt.html
+

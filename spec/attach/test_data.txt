@@ -1,0 +1,16 @@
+
+As a Hiki plugin
+[35m- should render an HTML fragment as expected (ERROR - 1)[0m
+
+1)
+[35mNoMethodError in 'As a Hiki plugin should render an HTML fragment as expected'
+undefined method `join' for 114:Fixnum[0m
+lib/ansisys.rb:23:in `hash_to_styles'
+./spec/hiki_spec.rb:27:in `map'
+lib/ansisys.rb:23:in `hash_to_styles'
+lib/ansisys.rb:589:in `ansi_screen'
+./spec/hiki_spec.rb:37:
+
+Finished in 0.158791 seconds
+
+[31m1 example, 1 failure[0m

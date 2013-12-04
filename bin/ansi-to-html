@@ -1,0 +1,29 @@
+#!/usr/bin/ruby
+#
+# ansi-to-html: command to convert ANSI-escaped texts to HTML fragments
+#
+# Copyright:: Copyright (C) 2007 zunda <zunda at freeshell.org>
+# License::   GPL
+#
+# == Todos
+# * Command Line Options
+#   * Output character code
+#   * Colors
+require 'nkf'
+require 'ansisys'
+
+# Following parameters are to be defined through command line options
+srcs = ARGV
+max_col = 80
+colors = AnsiSys::Screen.default_css_colors(false, true)
+style = AnsiSys::Screen.css_style(colors, max_col)
+terminal = AnsiSys::Terminal.new
+
+# Print out the HTML while reading
+puts "<html>\n<head>\n<style>\n#{style}</style>\n</head>\n<body>"
+srcs.each do |src|
+	data = File.open(src){|f| f.read}
+	puts terminal.echo(data).render(:html, max_col, nil, colors)
+	terminal.echo("\e[2J\e[m")
+end
+puts "</body>\n</html>"

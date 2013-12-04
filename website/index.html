@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+      Ruby-ANSI.SYS
+  </title>
+  <script src="javascripts/rounded_corners_lite.inc.js" type="text/javascript"></script>
+<style>
+
+</style>
+  <script type="text/javascript">
+    window.onload = function() {
+      settings = {
+          tl: { radius: 10 },
+          tr: { radius: 10 },
+          bl: { radius: 10 },
+          br: { radius: 10 },
+          antiAlias: true,
+          autoPad: true,
+          validTags: ["div"]
+      }
+      var versionBox = new curvyCorners(settings, document.getElementById("version"));
+      versionBox.applyCornersToAll();
+    }
+  </script>
+</head>
+<body>
+<div id="main">
+
+    <h1>Ruby-ANSI.SYS</h1>
+    <div id="version" class="clickable" onclick='document.location = "http://rubyforge.org/projects/ansi-sys"; return false'>
+      <p>Get Version</p>
+      <a href="http://rubyforge.org/projects/ansi-sys" class="numbers">0.8.4</a>
+    </div>
+    <h2>What</h2>
+<p>MS-<span class="caps">DOS</span> console (with <code>DEVICE=ANSI.SYS</code>), Linux<br />
+console, and other terminal emulators usually accept escape<br />
+sequences which tell the terminal change colors of the text or<br />
+move the cursor.</p>
+<p>Ruby-<span class="caps">ANSI</span>.<span class="caps">SYS</span> is a Ruby library to render texts with<br />
+<a href="http://en.wikipedia.org/wiki/ANSI_escape_code"><span class="caps">ANSI</span> escape sequences</a><br />
+(Wikipedia) as an <span class="caps">HTML</span> fragment . It can also be used as a plugin<br />
+for Hiki.</p>
+<h2>Download</h2>
+<p>Have a look at<br />
+<a href="http://rubyforge.org/projects/ansi-sys">the RubyForge Project Info</a></p>
+<h2>Installation</h2>
+<p>As a Ruby library:</p>
+<pre>$ ruby setup.rb config
+$ ruby setup.rb setup
+# ruby setup.rb install</pre>
+<p>Or:</p>
+<pre># gem install ansi-sys</pre>
+<p>As a Hiki plugin, copy the file lib/ansisys.rb into the<br />
+misc/plugin directory and configure Hiki to enable the plugin.</p>
+<h2>Usage</h2>
+<p>As a Ruby library:</p>
+<pre>
+require 'ansisys'
+terminal = AnsiSys::Terminal.new
+terminal.echo("ansi-escaped-text")
+terminal.render #=&gt; HTML fragment
+</pre>
+<p>As a Hiki plugin:</p>
+<pre>{{ansi_screen(attach_file_name)}}</pre>
+<p>Please also refer the <a href="rdoc/"><span class="caps">API</span> Document</a></p>
+<h2>Contact</h2>
+<p>Please send your comments and patches to<br />
+<a href="http://rubyforge.org/tracker/?group_id=4656">the RubyForge Trackers</a></p>
+<h2>License</h2>
+<p>Please refer<br />
+<a href="rdoc/files/License_txt.html">License.txt</a></p>
+    <p class="coda">
+      zunda, 23rd February 2011<br>
+      Theme extended from <a href="http://rb2js.rubyforge.org/">Paul Battley</a>
+    </p>
+</div>
+
+<!-- insert site tracking codes here, like Google Urchin -->
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+* 2011-02-22 zunda <zunda at freeshell.org>
+- (0.8.4) - releasing
+
+* 2011-02-22 zunda <zunda at freeshell.org>
+- spec/ansi-sys_spec.rb: Modified to run under Ruby 1.9.x
+- TODO: Fix failing examples
+
+* 2011-02-22 zunda <zunda at freeshell.org>
+- script/txt2html: Modified to run under Ruby 1.9.x
+
+* 2011-02-22 zunda <zunda at freeshell.org>
+- Rakefile: Modified library path to start from current directory
+
+* 2011-02-10 zunda <zunda at freeshell.org>
+- (0.8.4)
+- lib/ansisys.rb: Modified to be compatible with Ruby 1.9
+ref. https://gist.github.com/818076 Thanks to @jugyo 
+http://twitter.com/jugyo/status/35232510141136896
+
+* 2011-02-10 zunda <zunda at freeshell.org>
+- setup.rb: Modified to use Test::Unit.setup_argv on Ruby 1.9
+Thanks to http://d.hatena.ne.jp/ser1zw/20110112/1294843853
+
+* 2011-02-09 zunda <zunda at freeshell.org>
+- Renamed test/testbasicrender.rb as test/test_basicrender.rb
+to let setup.rb run test on ruby-1.8.x
+
+* 2011-02-09 zunda <zunda at freeshell.org>
+- test/testbasicrender.rb: Added test/testbasicrender.rb to make testing
+compatiblity with ruby-1.9.x and ruby-1.8.x easier: try e.g.
+make RUBY=ruby18 test
+- lib/ansisys.rb: Added require to nkf. NKF is used in AnsiSys::Guess
+- Makefile: Modified to be compatible with ruby-1.9.x and ruby-1.8.x
+
+* 2007-11-18 zunda <zunda at freeshell.org>
+- (0.8.3)
+- lib/ansisys.rb: modified to specify encoding to Hiki plugin
+
+* 2007-11-18 zunda <zunda at freeshell.org>
+- (0.8.2)
+- spec/hiki_spec.rb: added specs for shift-JIS and EUC-JP input files
+- lib/ansisys.rb: added AnsiSys::Guess.kcode(data)
+- bin/ansi-to-html: modified to use KCODE guess inside the library
+
+* 2007-11-18 zunda <zunda at freeshell.org>
+- (0.8.1)
+- lib/ansisys.rb: modified Characters#echo_on, Characters#each_char,
+  Terminal#render to take kcode as an argument
+- bin/ansi-to-html: modified accordingly
+
+* 2007-11-16 zunda <zunda at freeshell.org>
+- (0.8.0)
+- bin/ansi-to-html: modified to guess character codes of the inputs
+- spec/ansi-to-html_spec.rb: added
+- spec/attach/test_utf8_wide.txt and spec/attach/test_utf8_wide.rendered.txt:
+  added as test data for spec/ansi-to-html_spec.rb
+- Manifest.txt: updated
+  - so far, bin/ansi-to-html was not incuded in packages. sorry.
+- History.txt: updated
+
+* 2007-11-16 zunda <zunda at freeshell.org>
+- History.txt: updated
+
+* 2007-11-16 zunda <zunda at freeshell.org>
+- (0.7.1)
+- lib/ansisys.rb: modified not to put wide-characters beyond right edge
+- spec/character_screen_spec.rb: added a spec
+
+* 2007-11-14 zunda <zunda at freeshell.org>
+- (0.7.0)
+- bin/ansi-to-html: added
+  - still having a problem in measureing widths multibyte characters
+- lib/ansisys.rb: added RDoc, fixed some typos
+- README.txt: fixed a typo
+
+* 2007-11-03 zunda <zunda at freeshell.org>
+- (0.6.0)
+- spec/*_spec.rb: Clarified spec documents
+- Rakefile: added `spec' task as a default value
+  - I don't know how to remove `test' taks yet.
+
+* 2007-11-03 zunda <zunda at freeshell.org>
+- Edited website/stylesheets/screen.css
+
+* 2007-11-03 zunda <zunda at freeshell.org>
+- (0.5.0)
+- Formatted RDoc
+
+* 2007-11-01 zunda <zunda at freeshell.org>
+- Formatted RDoc through Screen class
+
+* 2007-10-27 zunda <zunda at freeshell.org>
+- (0.4.1)
+- Updated History.txt
+
+* 2007-10-27 zunda <zunda at freeshell.org>
+- (0.4.0)
+- lib/ansisys.rb: implemented SU, SD, SCP, and RCP onto Terminal
+  - not to be implemented: DSR
+
+* 2007-10-26 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implemented ED and EL onto Terminal
+  - more to be done: SU SD DSR SCP RCP
+
+* 2007-10-26 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: modified arguments of apply_code! to avoid
+  decoding of arguments into a letter and parameters
+- spec/attach/test_utf8.txt: added
+
+* 2007-10-23 zunda <zunda at freeshell.org>
+- (0.3.0)
+- lib/ansisys.rb: convert string to EUC as a Hiki plugin
+
+* 2007-10-21 zunda <zunda at freeshell.org>
+- website/index.txt: added instruction to gem install and a link to RDoc
+
+* 2007-10-21 zunda <zunda at freeshell.org>
+- (0.2.0) First release on RubyForge
+- Makefile: modified commands in commit target
+
+* 2007-10-21 zunda <zunda at freeshell.org>
+- config/hoe.rb: modified gem description
+- website/template.rhtml: showed link to download
+- History.txt: updated
+
+* 2007-10-21 zunda <zunda at freeshell.org>
+- README.txt: modified Usage example to be more user friendly
+- Manifest.txt: removed COPYING
+
+* 2007-10-20 zunda <zunda at freeshell.org>
+- website/template.rhtml: hidden link to download
+- website/index.txt added a link to Wikipedia
+
+* 2007-10-20 zunda <zunda at freeshell.org>
+- website/template.rhtml, index.txt, stylesheets/screen.css, and
+  script/txt2html: modified for website to be uploaded
+- README.txt: updated file for license
+
+* 2007-10-19 zunda <zunda at freeshell.org>
+- config/hoe.rb: Modified GEM_NAME to make life easier
+
+* 2007-10-19 zunda <zunda at freeshell.org>
+- gpl.rd.txt: renamed from gpl.txt, formatted as RD
+- lgpl.rd.txt: renamed from lgpl.txt, formatted as RD
+- Manifest.txt: updated
+
+* 2007-10-19 zunda <zunda at freeshell.org>
+- License.txt: renamed from COPYING, formatted as RD
+
+* 2007-10-19 zunda <zunda at freeshell.org>
+- Merged -r 2:6 at
+  svn+ssh://zunda@rubyforge.org/var/svn/ansi-sys/trunk/ansi-sys
+- doc/: removed
+
+* 2007-10-16 zunda <zunda at freeshell.org>
+- script/txt2html: modified to run rake website_generate
+- Manifest.txt: updated
+
+* 2007-10-16 zunda <zunda at freeshell.org>
+- config/requirements.rb and config/hoe.rb: modified to run rake -T
+
+* 2007-10-16 zunda <zunda at freeshell.org>
+- Started gemify
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- (0.1.1)
+- Documentation
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- (0.1.0)
+- Tagging. First usable release.
+- Makefile: modified to appropriately tag
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- spec/hiki_spec.rb and spec/attach/test_data.{txt,html}: added
+- lib/ansisys.rb: added a \n after <pre> to make sure first \n is
+  rendered
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: modified to include css style as Hiki plugin
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: added CSSFormatter.hash_to_styles
+- lib/ansisys.rb: modified SGR#css_style and Screen.css_style  to
+  use CSSFormatter.hash_to_styles
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: added code to be used as Hiki plugin
+- TODO: should output css style to somewhere
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: added padding: 0.5em to css_style
+- spec/screen_spec.rb: refactored
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: added Terminal#css_style, with renaming
+  default_style to css_style in the other classes
+- lib/ansisys.rb: modified Cursor to work with max_row unspecified
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- spec/terminal_spec.rb: added an example to specify colors in rendering
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- spec/terminal_spec.rb: added an example on color HTML
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- spec/terminal_spec.rb: added
+- lib/ansisys.rb: modified to satisfy examples in spec/terminal_spec.rb
+
+* 2007-10-14 zunda <zunda at freeshell.org>
+- spec/character_spec.rb: fixed
+
+* 2007-10-12 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: removed fore/bakground colors arguments from methods for SGR
+- lib/ansisys.rb: added Screen.default_css_colors
+- spec/character_spec.rb: postponed some examples
+
+* 2007-10-12 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: moved Screen.default_style to Screen#default_style
+
+* 2007-10-12 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implemented Screen.default_foreground/background/style
+
+* 2007-10-12 zunda <zunda at freeshell.org>
+- spec/screen_spec.rb: refactored
+
+* 2007-10-12 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: modified Screen#render(:html) to surround screen with <pre>
+
+* 2007-10-12 zunda <zunda at freeshell.org>
+- spec/sgr_spec.rb: completed examples for SGR.css_style for now
+
+* 2007-10-12 zunda <zunda at freeshell.org>
+- spec/sgr_spec.rb: added examples for SGR.css_style
+
+* 2007-10-12 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implmented SGR.css_style
+
+* 2007-10-10 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implmented SGR.render
+
+* 2007-10-10 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: renamed Characters#distribute to Characters#echo_on
+- lib/ansisys.rb: implemented HTML escape to Screen#render
+- spec/character_screen_spec.rb: added
+- spec/character_spec.rb: moved some examples to character_screen_spec.rb
+
+* 2007-10-10 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implemented some methods for Screen
+- spec/screen_spec.rb: added
+
+* 2007-10-09 zunda <zunda at freeshell.org>
+- Modifying APIs. Many examples in specs fail.
+
+* 2007-10-08 zunda <zunda at freeshell.org>
+- spec/lexer_spec.rb: updated nameepace of PARAMETER_AND_LETTER
+
+* 2007-10-08 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: arranged sequence of classes
+
+* 2007-10-08 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implemented Cursor#advance!
+- lib/ansisys.rb: implemented Character#render
+
+* 2007-10-06 zunda <zunda at freeshell.org>
+- spec/lexer_spec.rb: modified descripion of an example
+
+* 2007-10-06 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implemented Lexer
+- spec/lexer_spec.rb: added
+- spec/cursor_spec.rb: modified spec for over-row movements
+- spec/cursor_spec.rb: fixed bug in code G
+
+* 2007-10-06 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implemented CSI_DOUBLE and CSI_SINGLE
+- spec/lexer_spec.rb: added
+
+* 2007-10-06 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implemented codes H and f
+
+* 2007-10-06 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: implemented codes A-G
+- lib/ansisys.rb: modified argument for apply_code!
+
+* 2007-10-06 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: started implementation of Cursor
+- spec/cursor_spec.rb: added
+- spec/sgr_spec.rb: added an exanmple when no parameter is given to SGR
+
+* 2007-10-04 zunda <zunda at freeshell.org>
+- lib/ansisys.rb: retabbed
+- spec/sgr_spec.rb: implemented all examples that were in test
+- test: removed
+
+* 2007-10-03 zunda <zunda at freeshell.org>
+- Makefile: fixed typo
+
+* 2007-10-03 zunda <zunda at freeshell.org>
+- setup.rb: modified to use $stdout and $stderr instead of STDOUT and STDERR
+
+* 2007-10-03 zunda <zunda at freeshell.org>
+- setup.rb: added spec task
+- spec/sgr_spec.rb: added
+- Makefile: added
